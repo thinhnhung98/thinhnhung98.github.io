@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "e20d34bd3c35ac3d91733fe361891cb7",
+  "assets/AssetManifest.json": "55f91eb62b3af31b0c0aa2f46bb882d1",
 "assets/assets/coin-anh.png": "0269f631c9ca3114df0f033c982a0e64",
 "assets/assets/coin-chu.png": "26328b45ce9187d35407d3ea79064f29",
 "assets/assets/coin.png": "47de7c44a97e2e21c2b12e2e58703c2d",
@@ -20,15 +20,16 @@ const RESOURCES = {
 "assets/assets/nghiduong.png": "c68fa7cdd67b8954a1efbd3b2e6fe769",
 "assets/assets/page.jpg": "29d90807ca9e2babd9ec177b013dccc3",
 "assets/assets/splash.jpg": "eee9b6c0f109872eea42273552dcf545",
-"assets/FontManifest.json": "4543e973292221c7e123f2f8c84435d0",
+"assets/FontManifest.json": "36704e1540823347de0b84d08238471a",
 "assets/fonts/AveresTitleRoman-Regular.otf": "27897f53fe286343ac2f1642694e575b",
 "assets/fonts/ChromoxomePro-ExtraLight.otf": "54e30a034f045c08a4cc71418c038ce8",
+"assets/fonts/ChromoxomePro-ExtraLight.ttf": "d41db4cce5219d50ac2ef850af730dc0",
 "assets/fonts/JournalSansNew-Display.otf": "4d3e839d48f9c00a40d7e2c9538c1cba",
 "assets/fonts/JournalSansNew-Italic.otf": "9a950aa483235d0ab3d06036f9901440",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/lang/en.json": "bc8883285c86690df3a9f96f2b6a8abd",
 "assets/lang/vi.json": "bc8883285c86690df3a9f96f2b6a8abd",
-"assets/NOTICES": "7f1cd5c756ee864ed5bc9a50ae73975f",
+"assets/NOTICES": "39c4f1de65538586386f5135f798adc5",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "831eb40a2d76095849ba4aecd4340f19",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "a126c025bab9a1b4d8ac5534af76a208",
@@ -36,9 +37,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "71c24f205737569f419c885530366a1d",
-"/": "71c24f205737569f419c885530366a1d",
-"main.dart.js": "978887561395bae8b000199bdaa8b1f8",
+"index.html": "0b097f13be417e8d42596b677511ea1f",
+"/": "0b097f13be417e8d42596b677511ea1f",
+"main.dart.js": "f23f58705cf95f3305e53f361218d10d",
 "manifest.json": "9e076ebaaa361410cbee51a92f26afbc",
 "version.json": "abd09451aa693f83cd1e7624097d1006"
 };
@@ -184,7 +185,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
